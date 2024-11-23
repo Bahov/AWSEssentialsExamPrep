@@ -11,13 +11,12 @@ export const handler = async(event: any) => {
     const TopicArn = process.env.TOPIC_ARN;
 
     console.log(event);
-
-    const EventBody = JSON.parse(event.body)
+    console.log(event.Records[0].dynamodb)
 
     // Publish to SNS
     await snsClient.send(new PublishCommand({
         TopicArn: TopicArn,
-        Message: `Invalid JSON received: ${EventBody.text}`
+        Message: `Invalid JSON received`
     }));
     console.log('Notification sent.')
 

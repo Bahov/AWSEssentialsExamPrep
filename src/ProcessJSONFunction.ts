@@ -26,7 +26,7 @@ export const handler = async(event: any) => {
                     S: v4(),
                 },
                 ErrorMessage: {
-                    S: 'Your JSON was not validated successfully!',
+                    S: 'Your JSON is not valid!',
                 },
                 ttl: {
                     N: ttl.toString(),
