@@ -1,17 +1,12 @@
-// import * as cdk from 'aws-cdk-lib';
-// import { Template } from 'aws-cdk-lib/assertions';
-// import * as AwsEssentialsExamPrep from '../lib/aws_essentials_exam_prep-stack';
+import * as cdk from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
+import * as AwsEssentialsExamPrep from '../lib/aws_essentials_exam_prep-stack';
+import 'jest-cdk-snapshot';
 
-// example test. To run these tests, uncomment this file along with the
-// example resource in lib/aws_essentials_exam_prep-stack.ts
-test('SQS Queue Created', () => {
-//   const app = new cdk.App();
-//     // WHEN
-//   const stack = new AwsEssentialsExamPrep.AwsEssentialsExamPrepStack(app, 'MyTestStack');
-//     // THEN
-//   const template = Template.fromStack(stack);
+test('Test Stack', () => {
+  const app = new cdk.App();
+    // WHEN
+  const stack = new AwsEssentialsExamPrep.AwsEssentialsExamPrepStack(app, 'MyTestStack');
+  expect(stack).toMatchCdkSnapshot()
+  });
 
-//   template.hasResourceProperties('AWS::SQS::Queue', {
-//     VisibilityTimeout: 300
-//   });
-});
