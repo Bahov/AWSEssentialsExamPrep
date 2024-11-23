@@ -12,6 +12,15 @@ export const handler = async(event: any) => {
 
     console.log(event);
 
+    const EventBody = JSON.parse(event.body)
+
+    // Publish to SNS
+    await snsClient.send(new PublishCommand({
+        TopicArn: TopicArn,
+        Message: `Invalid JSON received: ${EventBody.text}`
+    }));
+    console.log('Notification sent.')
+
     return {
         statusCode: 200,
         body: 'Hi from Lambda',
