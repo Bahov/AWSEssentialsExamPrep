@@ -58,7 +58,7 @@ exports[`Test Stack 1`] = `
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "378ed6d9478d299f683566235b88663b6560e33a927342b047a1944fc83d6a14.zip",
+          "S3Key": "bc8b2fc5560a926692373e03c6964e2a6a8b5eecd650ce7a7a2928c9e79d0a98.zip",
         },
         "Environment": {
           "Variables": {
@@ -478,7 +478,7 @@ exports[`Test Stack 1`] = `
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "672beb31d6a7008e8004ae35b0dc1cf51611e63c6d914e66ab2e4d72ed73ec44.zip",
+          "S3Key": "ec65c9c75bf8bd280b831f478eae9f5d5f395321b951a264c4a94b8fbad542bb.zip",
         },
         "Environment": {
           "Variables": {
