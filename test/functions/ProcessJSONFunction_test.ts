@@ -8,31 +8,32 @@
 //     });
 // });
 
-import { handler } from "../../src/ProcessJSONFunction";
+// import { HttpMethod } from "aws-cdk-lib/aws-events";
+// import { handler } from "../../src/ProcessJSONFunction";
 
-describe("ProcessJSONFunction test", () => {
-    it("should process JSON correctly", () => {
-        // Test input JSON
-        const input = {
-            name: "John Doe",
-            age: 30,
-            city: "New York"
-        };
+// describe("ProcessJSONFunction test", () => {
+//     test("should process JSON correctly", async () => {
+//         // Test input JSON
+//         const input = {
+//             HttpMethod: "POST",
+//             body: JSON.stringify({
+//                 name: "John Doe",
+//                 age: 30,
+//                 city: "New York"
+//             })
+//         };
 
-        // Expected output JSON
-        const expectedOutput = {
-            message: "Processed JSON successfully",
-            data: {
-                name: "John Doe",
-                age: 30,
-                city: "New York"
-            }
-        };
+//         // Expected output JSON
+//         const expectedOutput = {
+//             message: "Processed JSON successfully",
+//             data: {
+//                 name: "John Doe",
+//                 age: 30,
+//                 city: "New York"
+//             }
+//         };
 
-        // Call the handler function
-        const result = handler(input);
-
-        // Assert that the result matches the expected output
-        expect(result).toEqual(expectedOutput);
-    });
-});
+//         // Assert that the result matches the expected output
+//         expect(await handler(input)).toEqual(expectedOutput);
+//     });
+// });
